@@ -1,41 +1,41 @@
 ! special
-*.foreground:   #e8dfd6
-*.background:   #021b21
-*.cursorColor:  #e8dfd6
+*.foreground:   #ffffff
+*.background:   #000000
+*.cursorColor:  #ffffff
 
 ! black
-*.color0:       #032c36
-*.color8:       #065f73
+*.color0:       #101010
+*.color8:       #404040
 
 ! red
-*.color1:       #c2454e
-*.color9:       #ef5847
+*.color1:       #e84f4f
+*.color9:       #d23d3d
 
 ! green
-*.color2:       #7cbf9e
-*.color10:      #a2d9b1
+*.color2:       #b8d68c
+*.color10:      #a0cf5d
 
 ! yellow
-*.color3:       #8a7a63
-*.color11:      #beb090
+*.color3:       #e1aa5d
+*.color11:      #f39d21
 
 ! blue
-*.color4:       #2e3340
-*.color12:      #61778d
+*.color4:       #7dc1cf
+*.color12:      #4e9fb1
 
 ! magenta
-*.color5:       #ff5879
-*.color13:      #ff99a1
+*.color5:       #9b64fb
+*.color13:      #8542ff
 
 ! cyan
-*.color6:       #44b5b1
-*.color14:      #9ed9d8
+*.color6:       #6d878d
+*.color14:      #42717b
 
 ! white
-*.color7:       #f2f1b9
-*.color15:      #f6f6c9
+*.color7:       #dddddd
+*.color15:      #dddddd
 
-URxvt*font: xft:DejaVuSansMono:size=14:antialias=true
+URxvt*font: xft:Monoid Nerd Font Mono:style=Regular:size=11
 
 URxvt*borderLess: false
 URxvt*externalBorder: 0
