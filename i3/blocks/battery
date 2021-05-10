@@ -75,6 +75,9 @@ if ($status eq 'Discharging') {
 } elsif ($status eq 'Unknown') {
 	$label = "\x{f582}";
 	$color = "#FFAE00";
+} elsif ($status eq 'Full') {
+	$label = "\x{f584}";
+	$color = "#5C54B9";
 }
 
 $full_text = "$label $percent%";
