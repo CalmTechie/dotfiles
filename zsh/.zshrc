@@ -26,27 +26,23 @@ setopt AUTO_PUSHD
 setopt PUSHD_IGNORE_DUPS
 setopt PUSHD_SILENT
 
-######
-# bd #
-######
-source ~/dotfiles/zsh/external/bd.zsh
+###########
+# Key fix #
+###########
+function zle-line-init () { echoti smkx }
+function zle-line-finish () { echoti rmkx }
+zle -N zle-line-init
+zle -N zle-line-finish
 
-if [ $(command -v "fzf") ]; then
-	source /usr/share/fzf/completion.zsh
-	source /usr/share/fzf/key-bindings.zsh
-fi
-
-#############
-# dircolors #
-#############
-#source /usr/share/zsh/plugins/zsh-dircolors-solarized/zsh-dircolors-solarized.zsh
+bindkey    "^[[3~"          delete-char
+bindkey    "^[3;5~"         delete-char
 
 ################
 # Autoload X11 #
 ################
 if [ "$(tty)" = "/dev/tty1" ];
 then
-	pgrep i3 || exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
+	exec startx "$XDG_CONFIG_HOME/X11/.xinitrc"
 fi
 
 ####################

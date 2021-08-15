@@ -11,8 +11,3 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 export DOTFILES="$HOME/dotfiles"
-
-export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!.git'"
-export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
-
-export _ZSH_DIRCOLORS_SOLARIZED_CONF="$XDG_CONFIG_HOME/zsh/.zsh-dircolors.config"
