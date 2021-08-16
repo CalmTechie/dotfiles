@@ -18,4 +18,4 @@ message=${mid%,*}
 urgency=${res%%,*}
 echo "mid: $mid;; level: $level;; message: $message;; urg: $urgency;;"
 
-dunstify -a "chvol" -u $urgency  -h string:x-canonical-private-synchronous:audio -h int:value:$level "Громкость: ${level}" $message
+dunstify -a "maintain" -u $urgency  -h string:x-canonical-private-synchronous:maintain -h int:value:$level "Громкость: ${level}" $message

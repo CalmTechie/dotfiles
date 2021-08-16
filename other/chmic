@@ -1,0 +1,16 @@
+#!/bin/sh
+
+res=`amixer set Capture toggle | tail -n 1 | awk '
+	/\[(on|off)\]/{
+		gsub(/\[|\]/,"");
+		if($7 == "off") {
+			print "normal,выключен";
+		} else {
+			print "low,включён";
+		}
+	}'`
+
+status=${res##*,}
+urgency=${res%%,*}
+
+dunstify -a "maintain" -u $urgency -h string:x-canonical-private-synchronous:maintain "Микрофон $status"

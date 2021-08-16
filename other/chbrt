@@ -1,0 +1,7 @@
+#!/bin/sh
+
+xbacklight -$1 5
+a=`xbacklight`
+lvl=${a%.*}
+
+dunstify -a "maintain" -u low -h string:x-canonical-private-synchronous:maintain -h int:value:$lvl "Яркость: $lvl"

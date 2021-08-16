@@ -45,12 +45,12 @@
 [urgency_low]
     background = "#303030"
     foreground = "#87AF87"
-    timeout = 10
+    timeout = 5
  
 [urgency_normal]
     background = "#303030"
     foreground = "#C6C6C6"
-    timeout = 15 
+    timeout = 10 
  
 [urgency_critical]
     background = "#d75f5f"
@@ -58,11 +58,13 @@
     timeout = 30
 
 [chvol-change]
-	appname = chvol
+	appname = maintain
 	msg_urgency = low
 	highlight = "#3770C9"
+	timeout = 1
 
 [chvol-mute]
-	appname = chvol
+	appname = maintain
 	msg_urgency = normal
 	highlight = "#da251c"
+	timeout = 2
