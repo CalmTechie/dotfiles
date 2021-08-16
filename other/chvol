@@ -1,0 +1,21 @@
+#!/bin/sh
+
+com="5%$1"
+[ $1 = "m" ] && com="toggle"
+
+res=`amixer set Master $com | awk '
+	/\[(on|off)\]/{
+		gsub(/\[|\]/,"");
+		if($6 == "off") {
+			print "normal,Заглушено,"$4;
+		} else {
+			print "low,,"$4;
+		}
+	}'`
+mid=${res#*,}
+level=${mid#*,}
+message=${mid%,*}
+urgency=${res%%,*}
+echo "mid: $mid;; level: $level;; message: $message;; urg: $urgency;;"
+
+dunstify -a "chvol" -u $urgency  -h string:x-canonical-private-synchronous:audio -h int:value:$level "Громкость: ${level}" $message

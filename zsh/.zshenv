@@ -11,3 +11,4 @@ export HISTSIZE=10000
 export SAVEHIST=10000
 
 export DOTFILES="$HOME/dotfiles"
+export PATH=$PATH:$XDG_DATA_HOME/my_scripts
