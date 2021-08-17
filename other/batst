@@ -1,0 +1,19 @@
+#!/bin/sh
+
+text=`cat /sys/class/power_supply/BAT0/status`
+level=`cat /sys/class/power_supply/BAT0/capacity`
+
+if [ $text = "Full" ] 
+then
+	icon="" 
+elif [ $text = "Charging" ] 
+then
+	icon="" 
+elif [ $text = "Discharging" ] 
+then
+	icon=""
+else
+	icon=""
+fi
+
+printf "%s %s\n" $level $icon

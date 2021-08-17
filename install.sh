@@ -21,6 +21,7 @@ mkdir -p "$XDG_DATA_HOME/my_scripts"
 cp -f "$DOTFILES/other/chvol" "$XDG_DATA_HOME/my_scripts/"
 cp -f "$DOTFILES/other/chbrt" "$XDG_DATA_HOME/my_scripts/"
 cp -f "$DOTFILES/other/chmic" "$XDG_DATA_HOME/my_scripts/"
+cp -f "$DOTFILES/other/batst" "$XDG_DATA_HOME/my_scripts/"
 ln -sf "$DOTFILES/other/mkeys.config" "$XDG_CONFIG_HOME"
 
 mkdir -p "$XDG_CONFIG_HOME/dunst"

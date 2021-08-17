@@ -10,7 +10,6 @@ ttr() {
 }
 
 alias sws='xsel -op | xsel -ib'
-alias killme='pkill -KILL -u deacon'
 
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
